@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- calling the project CSS file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Kanit font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- title -->
+    <title>Countdown</title>
+  </head>
+
+  <!-- HTML design -->
+  <body>
+    <!-- flexbox container, counterdown -->
+    <div class="flex-container">
+      <!-- title -->
+      <div class="title-container">
+        <div class="title">Vamos para Sevilla!</div>
+      </div>
+      <!-- progression bar-->
+      <div class="progress-container">
+        <div class="progress"></div>
+      </div>
+      <!-- space -->
+      <div class="space-container">
+        <div class="space"></div>
+      </div>
+      <!-- counter down -->
+      <div class="counter">
+        <!-- days counter -->
+        <div class="box">
+          <div class="digit-days">00</div>
+          <div class="units">DÍAS</div>
+        </div>
+        <!-- hours counter -->
+        <div class="box">
+          <div class="digit-hours">00</div>
+          <div class="units">HORAS</div>
+        </div>
+        <!-- minutes counter -->
+        <div class="box">
+          <div class="digit-minutes">00</div>
+          <div class="units">MINUTOS</div>
+        </div>
+        <!-- seconds counter -->
+        <div class="box">
+          <div class="digit-seconds">00</div>
+          <div class="units">SEGUNDOS</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- calling js file-->
+    <script src="countdown_project.js"></script>
+  </body>
+</html>
