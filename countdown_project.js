@@ -6,7 +6,7 @@ The aim of this little project is to create a timer which countdown until an spe
 // current date, total remaining time in seconds, seconds, minutes, hours and days
 const getTime = (endDate, startDate) => {
   let now = new Date(),
-    time = (new Date(endDate) - now) / 1000,
+    time = (new Date(endDate) - now) / 1000 + 3600, // +1 hour needs to addapt brazil timezone
     seconds = `0${Math.floor(time % 60)}`.slice(-2),
     minutes = `0${Math.floor((time / 60) % 60)}`.slice(-2),
     hours = `0${Math.floor((time / 3600) % 24)}`.slice(-2),
@@ -18,13 +18,11 @@ const getTime = (endDate, startDate) => {
   return { now, time, seconds, minutes, hours, days, end, start, progress };
 };
 
-// date to countdown
-const dateTo =
-  "Fri Dec 31 2021 23:00:00 GMT+0100 (Central European Summer Time)";
+// date to  (Brazil timezone)
+const dateTo = "Fri Dec 31 2021 23:00:00 GMT-0300";
 
-// date where started theh countdouwn
-const dateStart =
-  "Fri Oct 1 2021 23:00:00 GMT+0200 (Central European Summer Time)";
+// date where started theh countdouwn (Brazil timezone)
+const dateStart = "Fri Oct 1 2021 23:00:00 GMT-0300";
 
 // getting alld the HTML elements of the counterdown
 const seconds = document.querySelector(".digit-seconds");
